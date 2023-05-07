@@ -1,0 +1,17 @@
+.features {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+.featureCard{
+  margin-bottom: 10px;
+}

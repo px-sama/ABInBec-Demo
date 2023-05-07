@@ -1,0 +1,63 @@
+# Teradata Decommission FAQ
+
+:::info 
+For additional support, email us at AlchemySupport@anheuser-busch.com or complete [this form](https://forms.office.com/r/f95zHn6nYq).
+:::
+
+## General Information 
+**What is impacted by the Teradata Decommission?**<br />
+Anything that pulls data from Teradata or the EDW schema in Snowflake will need to be repointed to new, "modernized" tables in Snowflake. Snowflake users that don't use the EDW schema will NOT be impacted.
+
+**What actions do I need to take?**<br />
+You'll need to update any queries that utilize the EDW schema. We'll provide you with the new schema and table names, and you should be able to do a "find and replace" on your code. 
+
+**What's the best way for me to keep track of updates?**<br />
+Here, on the Alchemy site! 
+
+**I'm not sure if I'm impacted by this. What should I do?**<br />
+Attend an Office Hours session on Wednesdays at 1PM CT. 
+
+**Will all data connections need to be updated to the new table locations?**<br />
+Yes
+
+**Is PATSI being decommissioned as well?**<br />
+Yes
+
+**Where can I find information about the Tables that have been or will be retired?**<br />
+On the [Decommissioned Tables](https://docs.alchemy.beertech.com/docs/teradata-updates/decommissioned-tables) section of the Alchemy website.
+
+
+## Modernized Tables 
+
+**What is a modernized table?**<br />
+Modernized tables have been refactored to remove any dependancies on Teradata.
+
+**When can we expect the first modernized tables to be available?**<br />
+We expect to have wave 1 of the tables available for Product, Wholesaler, and Calendar by mid-May.
+
+**Where can I find information about the modernized table?**<br />
+We'll be posting this here on the Alchemy site starting in mid-May.
+
+**Will column names be changing?**<br />
+No, all records and column names will remain the same. Only schema and table names will change. 
+
+**Where can I find the modernized table names?**<br />
+We will provide you with a mapping document that will have a full list of the old and new table names.  
+
+
+
+## Service Accounts
+
+**Are service accounts being decommissioned?**<br />
+Eventually, yes. New protocol requires users access Snowflake using a personal account. We'll test out the new protocol for accessing data via a personal Snowflake account before revoked Service Account access. 
+
+**What should I do if I'm sharing a Service Account that is accessing Snowflake?**<br />
+Please request your own Snowflake account by submitting a [NAZTechNow ticket](https://solutionsnow.one.ofc.loc/plugins/servlet/desk/portal/4/create/2569).
+
+**Can we continue to use Service Accounts that are embedded within code (eg., Python)?**<br />
+Yes, please provide the details about the process and service account being used via email to AlchemySupport@anheuser-busch.com.
+
+## Process Map
+
+<img src='/img/Process-Map.png'></img>
+
