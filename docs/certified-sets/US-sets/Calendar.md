@@ -5,14 +5,21 @@ tags:
     - Dates
 description: Definitions for the most often used time periods within the Gregorian Calendar
 ---
+
+import {PageCreator} from '@site/src/components/PageCreator'
+import LiveDemo from '@site/src/components/index-live-demo'
+import FieldMappings from '@site/src/components/FieldName/FieldMapping'
+
 # Calendar  
 
 This views in this data set collectively represent a robust series of definitions for the most often used time periods within the Gregorian Calendar. These views can either be used for reference if loading calendar elements as part of development of a reporting solution or referenced when direct querying sales, shipment or production data to analyze STRs or STWs within a given time period such as Days, Calendar Weeks, ISO Weeks, Months, Quarters or Trimesters.
 
-  
 
 ### [**EDW.CAL_DT**](https://app.snowflake.com/east-us-2.azure/abinbev_naz/data/databases/ABI_WH/schemas/EDW/view/CAL_DT)
-This is the most granular and most dynamic of the Calendar views that defines each Date on the calendar. For nearly any possible query requiring or including a date, this should be the primary view referenced. It includes a wealth of attributes about a given Date including corresponding time frames from the prior year for quick year over year analysis.
+
+<LiveDemo />  
+
+<!-- This is the most granular and most dynamic of the Calendar views that defines each Date on the calendar. For nearly any possible query requiring or including a date, this should be the primary view referenced. It includes a wealth of attributes about a given Date including corresponding time frames from the prior year for quick year over year analysis. -->
  
 | **Field Name** | **Data Type** | **Comment** |
 | --- | --- | --- |  
@@ -46,7 +53,9 @@ This is the most granular and most dynamic of the Calendar views that defines ea
 | MDATA\_OBJ\_ID | NUMBER(15,0) | Metadata Object of the record |
 
   
+# Field Name Mappings
 
+<FieldMappings />
   
 
   
@@ -177,6 +186,8 @@ This view serves as a reference for every valid combination of an ISO Week and M
 | MDATA\_OBJ\_ID | NUMBER(15,0) | Metadata Object of the record |
 
 
+# How to query data
 
+<PageCreator />
 
 Published on 4/14/21 by A. Stites

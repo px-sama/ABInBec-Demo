@@ -24,6 +24,8 @@
     "@docusaurus/preset-classic": "^2.4.0",
     "@docusaurus/theme-mermaid": "^2.4.0",
     "@easyops-cn/docusaurus-search-local": "^0.26.1",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mdx-js/react": "^1.6.22",
     "@twilio-labs/docusaurus-plugin-for-datadog-rum": "^0.1.0",
     "aos": "^2.3.4",
@@ -33,7 +35,8 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.8.0",
-    "throttle-debounce": "^5.0.0"
+    "throttle-debounce": "^5.0.0",
+    "typeit-react": "^2.6.4"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^2.4.0",
