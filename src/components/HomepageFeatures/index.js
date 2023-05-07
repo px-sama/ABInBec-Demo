@@ -54,7 +54,7 @@ const FeatureList_locations = [
         By State, By City, etc.
       </>
     ),
-    link: 'https://www.google.com',
+    link: 'docs/category/us-data',
     SvgClassName: styles.featureSvg,
   },
   {
@@ -65,7 +65,7 @@ const FeatureList_locations = [
         By Province, By Region, etc.
       </>
     ),
-    link: 'https://www.google.com',
+    link: 'docs/category/canada-data',
     SvgClassName: styles.featureSvg,
   },
   {
@@ -90,7 +90,7 @@ const FeatureList_usages = [
         Tables by click popularity.
       </>
     ),
-    link: 'docs/tutorial-basics/Calendar',
+    link: 'docs/certified-sets/US-sets/Calendar',
     SvgClassName: styles.featureUsageSvg,
   },
   {
@@ -102,7 +102,7 @@ const FeatureList_usages = [
         Tables featured by BeerTech team.
       </>
     ),
-    link: 'docs/tutorial-basics/Calendar',
+    link: 'docs/certified-sets/US-sets/VIP-Sales',
     SvgClassName: styles.featureUsageSvg,
   },
   {
@@ -113,7 +113,7 @@ const FeatureList_usages = [
         Most recently added / updated table.
       </>
     ),
-    link: 'docs/tutorial-basics/Calendar',
+    link: 'docs/certified-sets/US-sets/Wholesaler',
     SvgClassName: styles.featureUsageSvg,
   },
 ];
