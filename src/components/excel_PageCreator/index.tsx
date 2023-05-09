@@ -9,11 +9,17 @@ import NavigateTimeIcon from '../../assets/img/pages/index/add_db.svg';
 import DataBaseIcon from '../../assets/img/pages/index/database.svg';
 import CheckDB from '../../assets/img/pages/index/ask_db.svg';
 import SvgImage from '../SvgImage';
-// import styles from "./styles.module.css"
+// import needed SVG images, i.e.
+// "import DataBaseIcon from '../../assets/img/pages/index/database.svg';"
+
+// define spacing values for each of the buttons shown on the right
 
 const S = [6, 4];
 const M = [6, 4];
 const L = [7, 5];
+
+// cycle through each button - to add another button, add 3, 4 , ...
+// to " ... , index: 1 | 2 ..."
 
 const getTopByIndex = (m: number[], index: 1 | 2): number => {
   const scale = {
@@ -23,6 +29,8 @@ const getTopByIndex = (m: number[], index: 1 | 2): number => {
 
   return scale[index] ?? 0;
 };
+
+// change text for associated button here
 
 const changeDB = `1. Click on the Data tab.
 2. Go to Get Data.
@@ -34,6 +42,9 @@ const changeAddress = `
 Dim FSO As New FileSystemObject
 Set FSO = CreateObject("[...].FileSystemObject")
 Set FileToRead = FSO.OpenTextFile("C:[...]")`;
+
+// create each button - text pair with its associated image
+// check that "Index = ..." has all button - text pairs
 
 type Index = 1 | 2;
 
@@ -144,9 +155,32 @@ export const PageCreatorexcel = () => {
                 Edit Addresses
               </h3>
             </div>
+
+
+
           </div>
         </div>
       </div>
     </section>
   );
 };
+
+// to add a new button - text pair, add:
+
+//          <div
+//            className={clsx(shCss.showcase__button, {
+//              [shCss['showcase__button--active']]: index === 1,
+//            })}
+//            // className="bg-white dark:bg-black rounded-sm px-6 py-8"
+//            onClick={handleClick1}
+//          >
+//            <h3 className={shCss.showcase__header}>
+//              <SvgImage
+//                image={<DataBaseIcon className={shCss.showcase__icon} />}
+//                title="Magnifying glass icon"
+//              />
+//              Change Data Source
+//            </h3>
+//          </div>
+
+// below the last indentation at line 159
