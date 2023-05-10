@@ -11,6 +11,7 @@ $ yarn
 ### Local Development
 
 ```
+$ yarn install
 $ yarn start
 ```
 
