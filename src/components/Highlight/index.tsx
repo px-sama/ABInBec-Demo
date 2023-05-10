@@ -1,7 +1,5 @@
 import React from "react"
-
 import Prism, { defaultProps } from "prism-react-renderer"
-
 import DarkTheme from "../../internals/prism-dracula"
 import LightTheme from "../../internals/prism-github"
 
@@ -20,7 +18,7 @@ const Highlight = ({
   language: string
 }) => (
   <div>
-    {/* @ts-expect-error missing type for language "questdb-sql". We know it exists but Prism does not provide such type */}
+    {/* Default to dark theme for demo purpose */}
     <Prism
       {...defaultProps}
       language={language}

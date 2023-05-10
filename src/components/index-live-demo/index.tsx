@@ -1,21 +1,11 @@
 import React, { useEffect, useState } from "react"
-import customFields from "../../config/customFields"
 import Highlight from "../../components/Highlight"
 import { Section } from "../../components/Section"
 import styles from "./styles.module.css"
-// import Button from "@theme/Button"
-// import { Button } from '@mui/material';
 import TypeIt from "typeit-react"
 
-// const exampleQueries = exampleQueriesRaw.map(({ comment, query }) => ({
-//   url: `${customFields.demoUrl}?query=${encodeURIComponent(
-//     [comment, query].join("\n"),
-//   )}&executeQuery=true`,
-//   query,
-//   view() {
-//     return <Highlight code={query} language="js" />
-//   },
-// }))
+// Leave text content as constant string for demo puroise
+// The input text can be query from the DB or a json file for production use
 
 const text = `This is the most granular and most dynamic of the Calendar views that defines each Date on the calendar. 
 
@@ -28,25 +18,14 @@ const createReactPage = (text) => {
 }
 
 const LiveDemo = () => {
-  const [query, setQuery] = useState<null | number>(null)
 
-  useEffect(() => {
-    const isClient = typeof window !== "undefined"
-
-    // if (isClient) {
-    //   setQuery(Math.floor(Math.random() * exampleQueries.length))
-    // }
-  }, [])
+  // useEffect(() => {
+  //   const isClient = typeof window !== "undefined"
+  // }, [])
 
   return (
     <Section fullWidth odd center>
-
-
       <div className={styles.preview}>
-        <Section.Subtitle className={styles.previewHeader}>
-          Try QuestDB demo in your browser
-        </Section.Subtitle>
-
         <div className={styles.editor}>
           <div className={styles.code}>
             <TypeIt
@@ -55,16 +34,13 @@ const LiveDemo = () => {
                 speed: 2,
                 waitUntilVisible: true,
                 cursor: false,
-                // strings: { createReactPage() }
               }}
             >
               {createReactPage(text)}
             </TypeIt>
-
           </div>
         </div>
       </div>
-
     </Section >
   )
 }

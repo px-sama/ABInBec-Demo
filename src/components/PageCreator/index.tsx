@@ -43,6 +43,7 @@ const mergeQuery = `SELECT CAL_YR_QTR_NBR
 FROM EDW.CAL_DT AS DATES
 RIGHT JOIN SALES ON DATES.CAL_DT = SALES.DT;`
 
+// Customize how many clickable section is needed
 type Index = 1 | 2 | 3 | 4
 
 export const PageCreator = () => {
@@ -61,13 +62,17 @@ export const PageCreator = () => {
     const handleClick4 = useCallback(() => {
         setIndex(4)
     }, [])
-    const handleUpClick = useCallback(() => {
-        setIndex(Math.max(index - 1, 1) as Index)
-    }, [index])
-    const handleDownClick = useCallback(() => {
-        setIndex(Math.min(index + 1, 4) as Index)
-    }, [index])
 
+    // Not used in the current version
+
+    // const handleUpClick = useCallback(() => {
+    //     setIndex(Math.max(index - 1, 1) as Index)
+    // }, [index])
+    // const handleDownClick = useCallback(() => {
+    //     setIndex(Math.min(index + 1, 4) as Index)
+    // }, [index])
+
+    // Set top session size depends on the window width 
     useEffect(() => {
         if (windowWidth != null && windowWidth < 622) {
             setTop(S)
@@ -93,13 +98,6 @@ export const PageCreator = () => {
         >
             <div className={shCss.showcase}>
                 <div className={shCss.showcase__inner}>
-                    {/* <div
-                        className={clsx(shCss.showcase__chevron)}
-                        onClick={handleUpClick}
-                        style={{ visibility: index === 1 ? "hidden" : "visible" }}
-                    >
-                        <Chevron />
-                    </div> */}
                     <div className={clsx(shCss.showcase__left)}>
                         <div
                             className={clsx(
@@ -108,6 +106,7 @@ export const PageCreator = () => {
                             )}
                             style={{ top: getTopByIndex(top, index) }}
                         >
+                            {/* Add code snippets in specific language and theme */}
                             <Highlight code={searchQuery} language="sql" />
                             <Highlight code={`-- Search time\n${searchQuery}`} language="txt" />
                             <Highlight code={sliceQuery} language="sql" />
@@ -136,6 +135,7 @@ export const PageCreator = () => {
                             // className="bg-white dark:bg-black rounded-sm px-6 py-8"
                             onClick={handleClick1}
                         >
+                            {/* Add customized icons for each section */}
                             <h3 className={shCss.showcase__header}>
                                 <SvgImage
                                     image={<SearchTimeIcon className={shCss.showcase__icon} />}
